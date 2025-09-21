@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="auto">
+<head>
+  <meta charset="utf-8" />
+  <title>李博安｜專案協調・議價整合・建築營造與場域改善</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <meta name="description" content="專長：專案協調、現場溝通、利害關係人協商、成本議價（冷氣/燈具/導擺）、工程與空間優化、現金流與風險控管、聲明與公共溝通。">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:title" content="李博安｜專案協調・議價整合・建築營造與場域改善">
+  <meta property="og:description" content="以『理性、負責、切割風險』為原則，協助專案回歸正軌。">
+  <meta property="og:type" content="website">
+  <meta name="format-detection" content="telephone=no,email=no,address=no">
+  <style>
+    /* ===== CSS 變數與主題 ===== */
+    :root{
+      --bg: #0b1220; --bg-soft:#0f172a; --txt:#e6edf3; --muted:#a4b1c3; --brand:#60a5fa;
+      --brand-2:#34d399; --card:#111827cc; --line:#1f2937; --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px; --pad:18px; --fs:18px; --max:1180px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f6f8fb; --bg-soft:#eef2f7; --txt:#0f172a; --muted:#4b5563; --card:#ffffffcc; --line:#e5e7eb; --shadow:0 10px 24px rgba(2,6,23,.08);}
+    }
+    html{font-size:clamp(18px,1.2vw,19px)}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),var(--bg-soft));color:var(--txt);font-family:system-ui,-apple-system,"Noto Sans TC","Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.65}
+    a{color:inherit}
+    .wrap{max-width:var(--max);margin:auto;padding:0 16px}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--brand);color:#071019;padding:.72rem 1.05rem;border-radius:12px;font-weight:700;border:1px solid #0000;box-shadow:var(--shadow);text-decoration:none;transition:.2s}
+    .btn:hover{transform:translateY(-1px);filter:saturate(1.1)}
+    .btn.ghost{background:transparent;border-color:var(--line);color:var(--txt)}
+    .chip{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .6rem;border:1px solid var(--line);border-radius:999px;font-size:.82rem;color:var(--muted);background:#00000014}
+    .card{background:var(--card);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
+    .grid{display:grid;gap:18px}
+    @media(min-width:980px){.grid-2{grid-template-columns:1.2fr .8fr}.grid-3{grid-template-columns:repeat(3,1fr)}}
+    header.nav{position:sticky;top:0;backdrop-filter:blur(10px);z-index:50}
+    header .bar{display:flex;justify-content:space-between;align-items:center;padding:10px 0}
+    .logo{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.5px}
+    .logo .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--brand),var(--brand-2))}
+    .navlinks{display:flex;gap:14px;align-items:center}
+    .navlinks a{padding:.45rem .7rem;border-radius:10px}
+    .navlinks a:hover{background:#00000014}
+    /* ===== Hero ===== */
+    .hero{padding:40px 0 28px}
+    .hero .inner{display:grid;gap:18px;align-items:center}
+    @media(min-width:980px){.hero .inner{grid-template-columns:1.1fr .9fr}}
+    h1{margin:.2rem 0 .6rem;font-size:clamp(28px,3.2vw,46px);line-height:1.2}
+    .lead{color:var(--muted);font-size:1.05rem}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px}
+    .stat{padding:14px;border:1px dashed var(--line);border-radius:14px;text-align:center}
+    .stat b{font-size:1.4rem;display:block}
+    .hero-figure{position:relative;isolation:isolate}
+    .halo{position:absolute;inset:auto 0 -10% 0;height:240px;background:radial-gradient(60% 60% at 50% 0,var(--brand) 0%,#0000 70%);filter:blur(60px);opacity:.5;z-index:-1}
+    .portrait{width:min(420px,90%);max-width:100%;display:block;margin:0 auto;object-fit:contain;filter:drop-shadow(0 16px 40px rgba(2,6,23,.35))}
+    /* ===== Section ===== */
+    section{padding:34px 0}
+    section h2{font-size:clamp(22px,2.4vw,28px);margin:.2rem 0 1rem}
+    .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .kpi{padding:16px;border-radius:16px;border:1px solid var(--line)}
+    .kpi .bar{height:8px;border-radius:99px;background:linear-gradient(90deg,var(--brand),var(--brand-2));margin-top:8px}
+    /* ===== Timeline ===== */
+    .timeline{position:relative;padding-left:22px}
+    .timeline:before{content:"";position:absolute;left:9px;top:0;bottom:0;width:2px;background:linear-gradient(var(--brand),var(--brand-2))}
+    .tl{position:relative;margin:0 0 18px 0;padding-left:10px}
+    .tl:before{content:"";position:absolute;left:-3px;top:.4rem;width:10px;height:10px;background:var(--brand);border-radius:50%;box-shadow:0 0 0 3px #00000010}
+    .tl small{color:var(--muted)}
+    /* ===== Gallery ===== */
+    .cases{display:grid;gap:14px}
+    @media(min-width:900px){.cases{grid-template-columns:repeat(3,1fr)}}
+    .case{overflow:hidden}
+    .case img{width:100%;height:180px;object-fit:cover;display:block;filter:saturate(1.05)}
+    .case .cap{padding:12px}
+    /* ===== Testimonials (純CSS輪播) ===== */
+    .t-wrap{position:relative}
+    .t-rail{display:flex;gap:14px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
+    .t-rail>*{scroll-snap-align:start;min-width:min(380px,85vw)}
+    /* ===== CTA / Contact ===== */
+    form.contact{display:grid;gap:12px}
+    input,textarea{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#00000010;color:var(--txt);font-size:1rem}
+    textarea{min-height:120px;resize:vertical}
+    /* ===== Footer & Quick Dock ===== */
+    footer{padding:36px 0;color:var(--muted)}
+    .dock{position:fixed;right:14px;bottom:14px;display:flex;flex-direction:column;gap:10px;z-index:60}
+    .fab{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--brand);color:#071019;border:0;box-shadow:var(--shadow);cursor:pointer}
+    .fab.ghost{background:#00000030;color:#fff;border:1px solid var(--line)}
+    /* ===== 小工具：字級切換與主題 ===== */
+    .uibox{display:flex;gap:10px;align-items:center}
+    .switch{display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .6rem;border:1px solid var(--line);border-radius:999px;cursor:pointer}
+    [data-font="lg"]{font-size:1.08em}
+    [data-font="xl"]{font-size:1.16em}
+    /* 可及性焦點 */
+    :focus-visible{outline:2px solid var(--brand-2);outline-offset:2px;border-radius:8px}
+  </style>
+</head>
+<body>
+  <!-- === 導覽 === -->
+  <header class="nav card">
+    <div class="wrap bar">
+      <div class="logo"><span class="dot" aria-hidden="true"></span>李博安</div>
+      <nav class="navlinks" aria-label="主選單">
+        <a href="#about">關於</a>
+        <a href="#strengths">強項</a>
+        <a href="#timeline">歷程</a>
+        <a href="#cases">案例</a>
+        <a href="#contact" class="btn">聯絡合作</a>
+        <div class="uibox">
+          <label class="switch" id="fontCtl" title="字級">
+            <span>字級</span>
+            <button type="button" data-f="md" class="chip">標準</button>
+            <button type="button" data-f="lg" class="chip">放大</button>
+            <button type="button" data-f="xl" class="chip">特大</button>
+          </label>
+          <button class="switch" id="themeCtl" type="button" title="深淺色">主題切換</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- === Hero === -->
+  <section class="hero">
+    <div class="wrap inner grid-2">
+      <div class="card" style="padding:22px">
+        <div class="chip">專案協調・議價整合・場域改善</div>
+        <h1>以「理性、負責、風險切割」讓專案回歸正軌</h1>
+        <p class="lead">
+          擅長在多方利害關係人之間找到解，從溝通到合約、從現場到成本，
+          以時間表、條件表與白紙黑字的承諾，協助專案安全落地。
+        </p>
+        <div class="stats" role="list">
+          <div class="stat" role="listitem"><b id="n1">0</b><small>協商/會談（近季）</small></div>
+          <div class="stat" role="listitem"><b id="n2">0</b><small>採購議價/進場</small></div>
+          <div class="stat" role="listitem"><b id="n3">0</b><small>風險切割/聲明</small></div>
+        </div>
+        <div style="display:flex;gap:10px;margin-top:16px">
+          <a class="btn" href="#contact">立即洽談</a>
+          <a class="btn ghost" href="#cases" aria-label="查看案例">查看案例</a>
+        </div>
+      </div>
+      <div class="hero-figure">
+        <div class="halo" aria-hidden="true"></div>
+        <!-- 將 src 換成您的已裁邊人像圖檔路徑，例如：assets/brian.png -->
+        <img class="portrait" src="assets/brian.png" alt="人物剪影展示（請替換為您的照片）">
+      </div>
+    </div>
+  </section>
+
+  <!-- === 關於 / 強項 === -->
+  <section id="about">
+    <div class="wrap grid grid-2">
+      <div class="card" style="padding:20px">
+        <h2>關於</h2>
+        <p>
+          以實事求是、面向法務與程序正義處理複雜專案：不迴避衝突、用文件說話；重視
+          「責任邊界」「資金流清楚」「第三方見證」。善於把混亂的溝通重新整理成條列
+          的可執行步驟與時程，減少誤會與重工。
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+          <span class="chip">利害關係人協商</span>
+          <span class="chip">法務/聲明撰擬</span>
+          <span class="chip">工程/場域導入（冷氣・燈具・導擺）</span>
+          <span class="chip">成本議價</span>
+          <span class="chip">現場節點排程</span>
+        </div>
+      </div>
+      <div class="card" id="strengths" style="padding:20px">
+        <h2>核心強項 KPI</h2>
+        <div class="kpis">
+          <div class="kpi"><b>協商結案率</b><div class="bar" style="width:86%"></div><small class="muted">明確條件＋時程控制</small></div>
+          <div class="kpi"><b>採購節省比</b><div class="bar" style="width:78%"></div><small class="muted">多家比價＋組合方案</small></div>
+          <div class="kpi"><b>準時進場率</b><div class="bar" style="width:82%"></div><small class="muted">前置圖審/資材鎖定</small></div>
+          <div class="kpi"><b>風險暴露度</b><div class="bar" style="width:20%;background:linear-gradient(90deg,#ef4444,#f59e0b)"></div><small class="muted">以切割與信託降低</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === 歷程（依里程碑抽象化呈現） === -->
+  <section id="timeline">
+    <div class="wrap card" style="padding:20px">
+      <h2>里程碑與關鍵事件</h2>
+      <div class="timeline">
+        <div class="tl">
+          <b>專案危機梳理與家族/公司切割</b><br><small>立場釐清、責任回歸當事人、以法律程序保護家人與資產</small>
+        </div>
+        <div class="tl">
+          <b>採購整合：冷氣/燈具/廁所導擺</b><br><small>多輪議價、排程協調、分期進場；以「先亮度/容量到位、再美學微調」策略落地</small>
+        </div>
+        <div class="tl">
+          <b>公共溝通稿與對外說明</b><br><small>以事實清單＋問答集回應流言，堅持不將他人責任轉嫁團隊</small>
+        </div>
+        <div class="tl">
+          <b>新場域啟動與成本控管</b><br><small>在有限預算下完成必要設備上線，保留彈性擴充位</small>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:8px">（以上摘要源自對話整理之工作軌跡與價值取向）</p>
+    </div>
+  </section>
+
+  <!-- === 案例/畫廊 === -->
+  <section id="cases">
+    <div class="wrap">
+      <h2>近期案例（示意）</h2>
+      <div class="cases">
+        <article class="card case">
+          <img src="https://images.unsplash.com/photo-1581094651181-3592cdfd44fd?q=80&w=1200" alt="機電與空調現場">
+          <div class="cap">
+            <b>冷氣系統整合與動線校核</b>
+            <p class="lead">多家報價與規格比對，鎖定進場檔期，搭配電力盤點與維修動線。</p>
+          </div>
+        </article>
+        <article class="card case">
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200" alt="照明配置示意">
+          <div class="cap">
+            <b>燈具配置優化</b>
+            <p class="lead">以均勻度與維護成本為核心，降低冗餘數量，兼顧照度與舒適。</p>
+          </div>
+        </article>
+        <article class="card case">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200" alt="工地協調會議">
+          <div class="cap">
+            <b>利害關係人協商</b>
+            <p class="lead">以條件表與時程控管達成共識，避免口頭承諾造成反覆溝通。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- === Testimonials === -->
+  <section>
+    <div class="wrap card" style="padding:20px">
+      <h2>他人怎麼說</h2>
+      <div class="t-wrap">
+        <div class="t-rail">
+          <blockquote class="card" style="padding:16px">
+            <p>「在壓力鍋裡也能把條件逐一釐清，該強硬就強硬，該保護就保護。」</p>
+            <small>— 合作夥伴</small>
+          </blockquote>
+          <blockquote class="card" style="padding:16px">
+            <p>「文件齊、時程明，進場與付款節點透明，讓專案少走很多冤枉路。」</p>
+            <small>— 設備商</small>
+          </blockquote>
+          <blockquote class="card" style="padding:16px">
+            <p>「把風險切乾淨，才有餘裕去創造價值。」</p>
+            <small>— 顧問</small>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === 聯絡 === -->
+  <section id="contact">
+    <div class="wrap grid grid-2">
+      <div class="card" style="padding:20px">
+        <h2>合作洽談</h2>
+        <p class="lead">若您需要專案協調、採購議價或場域改善顧問，歡迎留下需求與檔期。</p>
+        <form class="contact" onsubmit="event.preventDefault();alert('已收到，將盡快與您聯絡。');this.reset()">
+          <input type="text" name="name" placeholder="稱呼" required>
+          <input type="email" name="email" placeholder="Email" required>
+          <input type="text" name="topic" placeholder="需求主題（例如：冷氣＋燈具整合）">
+          <textarea name="msg" placeholder="請簡述時程、預算範圍與場域條件"></textarea>
+          <button class="btn" type="submit">送出需求</button>
+        </form>
+      </div>
+      <aside class="card" style="padding:20px">
+        <h2>服務範疇</h2>
+        <ul>
+          <li>利害關係人協商與條件表撰寫</li>
+          <li>採購與進場排程（冷氣/燈具/導擺等）</li>
+          <li>現場走查與缺失改善清單</li>
+          <li>聲明/澄清稿邏輯架構與Q&amp;A</li>
+          <li>資金流與責任邊界之切割建議</li>
+        </ul>
+        <p class="lead" style="margin-top:6px">* 可提供短期顧問或專案制合作。</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- === 頁腳 === -->
+  <footer>
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <small>© <span id="yy"></span> Li Bo-An. All Rights Reserved.</small>
+        <div style="display:flex;gap:8px">
+          <a class="chip" href="#about">關於</a>
+          <a class="chip" href="#cases">案例</a>
+          <a class="chip" href="#contact">聯絡</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 浮動工具列 -->
+  <div class="dock" aria-label="快速操作">
+    <button class="fab" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" title="預約洽談">✉️</button>
+    <button class="fab ghost" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到頂部">↑</button>
+  </div>
+
+  <script>
+    // 年份
+    document.getElementById('yy').textContent = new Date().getFullYear();
+
+    // Hero 動態數字（示意）
+    const anim = (el, to)=>{ let n=0, t=setInterval(()=>{ n+=Math.ceil(to/40); if(n>=to){n=to;clearInterval(t)} el.textContent=n },24)};
+    anim(document.getElementById('n1'), 24);
+    anim(document.getElementById('n2'), 18);
+    anim(document.getElementById('n3'), 12);
+
+    // 字級切換
+    const fontCtl=document.getElementById('fontCtl');
+    fontCtl.addEventListener('click',e=>{
+      const f=e.target?.dataset?.f; if(!f)return;
+      document.body.removeAttribute('data-font');
+      if(f!=='md') document.body.setAttribute('data-font', f);
+    });
+
+    // 主題切換（auto→light→dark）
+    const thCtl=document.getElementById('themeCtl');
+    const seq=['auto','light','dark'];
+    thCtl.addEventListener('click', ()=>{
+      const cur=document.documentElement.getAttribute('data-theme')||'auto';
+      const nxt=seq[(seq.indexOf(cur)+1)%seq.length];
+      document.documentElement.setAttribute('data-theme',nxt);
+      thCtl.textContent = '主題：' + (nxt==='auto'?'自動':(nxt==='light'?'淺色':'深色'));
+    });
+    thCtl.click(); // 初次標示狀態
+  </script>
+</body>
+</html>
